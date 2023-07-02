@@ -11,7 +11,7 @@ import (
 	"os"
 )
 
-var pallete = []color.Color{}
+var pallete = []color.Color{color.White}
 
 const (
 	blackIndex = 0 // First color in palette
@@ -19,16 +19,12 @@ const (
 )
 
 func main() {
-	for red := 0; red < math.MaxUint8; red++ {
-		for green := 0; green < math.MaxUint8; green++ {
-			for blue := 0; blue < math.MaxUint8; blue++ {
-				pallete = append(pallete, color.RGBA{uint8(red), uint8(green), uint8(blue), 0xff})
-			}
-		}
+	for i := 1; i < math.MaxUint8; i++ {
+		red := uint8(rand.Float64() * float64(256))
+		green := uint8(rand.Float64() * float64(256))
+		blue := uint8(rand.Float64() * float64(256))
+		pallete = append(pallete, color.RGBA{red, green, blue, 0xFF})
 	}
-	// fmt.Printf("len(pallete): %v\n", len(pallete))
-	// index := uint8(rand.Float64() * float64(len(pallete)))
-	// fmt.Printf("index: %v\n", index)
 	lissajous(os.Stdout)
 }
 
