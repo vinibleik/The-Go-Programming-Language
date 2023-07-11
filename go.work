@@ -1,3 +1,6 @@
 go 1.20
 
-use ./ch04/json/github
+use (
+	./ch04/json/github
+	./ch04/text-and-html-teamplates
+)
