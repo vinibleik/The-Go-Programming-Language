@@ -3,7 +3,8 @@ package main
 import (
 	"fmt"
 	"math"
-	"popcount/popcount"
+
+	"gopl.vini/ch02/popcount"
 )
 
 func main() {

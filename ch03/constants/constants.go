@@ -133,9 +133,9 @@ func main() {
 		a2       = uint32(deadbeef)  // uint32 with value 3735928559
 		b2       = float32(deadbeef) // float32 with value 3735928576 (rounded up)
 		c2       = float64(deadbeef) // float64 with value 3735928559 (exact)
-		d2       = int32(deadbeef)   // compile error: constant overflows int32
-		e2       = float64(1e309)    // compile error: constant overflows float64
-		f2       = uint(-1)          // compile error: constant underflows uint
+		// d2       = int32(deadbeef)   // compile error: constant overflows int32
+		// e2       = float64(1e309)    // compile error: constant overflows float64
+		// f2       = uint(-1)          // compile error: constant underflows uint
 	)
 }
 

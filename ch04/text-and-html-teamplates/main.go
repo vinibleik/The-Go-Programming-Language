@@ -1,13 +1,14 @@
 package main
 
 import (
-	"ch04/text-and-html/github"
 	"log"
 	"os"
+
+	"gopl.vini/ch04/github"
 )
 
 func main() {
-	result, err := github.SearchIssues(os.Args[1:])
+	result, err := github.SearchIssue(os.Args[1:])
 	if err != nil {
 		log.Fatal(err)
 	}

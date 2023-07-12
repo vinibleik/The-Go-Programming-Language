@@ -1,7 +1,7 @@
 package main
 
 import (
-	"ch04/text-and-html/github"
+	"gopl.vini/ch04/github"
 	"fmt"
 )
 
