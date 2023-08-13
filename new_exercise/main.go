@@ -27,13 +27,13 @@ var goMain = template.Must(template.New("goMain").Parse(mainTemplate))
 
 // Returns the path to the correct directory received by command-line
 func getDirPath(dir string) (string, error) {
-	ex, err := os.Executable()
-	if err != nil {
-		return "", err
-	}
+	// ex, err := os.Executable()
+	// if err != nil {
+	// 	return "", err
+	// }
 
-	dirEx := filepath.Dir(ex)
-	dirPath := filepath.Join(dirEx, "..", dir)
+	dirEx := "/home/vinicius/Workspace/work/The-Go-Programming-Language"
+	dirPath := filepath.Join(dirEx, dir)
 
 	return dirPath, nil
 }
